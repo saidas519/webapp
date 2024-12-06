@@ -1,14 +1,14 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: {{ .Values.appName }}-route
+  name: nginx-route-617714
   labels:
-    app: {{ .Values.appName }}
+    app: nginx-deployment-617714
     environment: dev
 spec:
   to:
     kind: Service
-    name: {{ .Values.appName }}
+    name: nginx-service-617714
     weight: 100
   port:
     targetPort: flask
